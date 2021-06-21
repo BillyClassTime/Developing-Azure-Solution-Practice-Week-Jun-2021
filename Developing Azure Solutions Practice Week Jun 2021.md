@@ -242,5 +242,5 @@ In this module, you will:
 
 Learn how to create, build, and deploy modern full stack applications in Azure by using the language of your choice (Python, Node.js, or .NET) and with a Vue.js frontend. Topics covered include modern database capabilities, CI/CD and DevOps, backend API development, REST, and more. Using a real-world scenario of trying to catch the bus, you will learn how to build a solution that uses Azure SQL Database, Azure Functions, Azure Static Web Apps, Logic Apps, Visual Studio Code, and GitHub Actions.
 
-![](D:\OFF\billyclasstime\OneDrive - Billy Class Time\Desktop\1-catch-the-bus.svg)
+![](1-catch-the-bus.svg)
 
