@@ -12,7 +12,7 @@ All practices [here](Developing Azure Solutions Practice Week Jun 2021.md)
 > If the folder still was in repository before to add .git inside them use the following commands to fix it.
 
 ```powershell
-git git rm -r --cached 
+git rm -r --cached 
 
 git add .
 
