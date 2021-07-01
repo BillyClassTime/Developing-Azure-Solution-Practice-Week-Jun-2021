@@ -22,7 +22,7 @@ Web apps in Azure allow you to publish and manage your website easily without ha
 
 
 
-## 3- Creación de aplicaciones sin servidor
+## 3- Creación de aplicaciones sin servidor (Spanish version)
 
 [Ruta de aprendizaje Creación de aplicaciones sin servidor - Learn | Microsoft Docs](https://docs.microsoft.com/es-es/learn/paths/create-serverless-applications/)
 
