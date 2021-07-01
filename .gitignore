@@ -385,12 +385,12 @@ buildNumber.properties
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 
-01/mslearn-hotel-reservation-system/.git
-05/mslearn-apim-and-functions/.git
-07/education/.git
-11/KeyVaultDemoApp/.git
-12/PrintFramerAPId3b4e2050f/.git
-13/mslearn-connect-services-together/.git
-15/azure-event-hubs/.git
-18/.git
+01/mslearn-hotel-reservation-system/
+05/mslearn-apim-and-functions/
+07/education/
+11/KeyVaultDemoApp/
+12/PrintFramerAPId3b4e2050f/
+13/mslearn-connect-services-together/
+15/azure-event-hubs/
+18/
 pracfinal/.git
