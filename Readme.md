@@ -19,3 +19,9 @@ git add .
 git commit -m "Fixing folders with repositories"
 ```
 
+> To know what files are pending to push to remote repository:
+
+```
+git diff --stat --cached origin/master
+```
+
