@@ -1,0 +1,64 @@
+az group create --name prac11RG --location francecentral
+
+az keyvault create --resource-group prac11RG `
+--location francecentral --name akvbmvb2021prac11
+
+az keyvault secret set --name SecretPassword --value reindeer_flotilla `
+--vault-name akvbmvb2021prac11
+
+az appservice plan create `
+   --name keyvault01-exercices-plan `
+   --sku FREE `
+   --location francecentral `
+   --resource-group prac11RG
+
+#az appservice plan delete --name keyvault-exercices-plan --resource-group prac11RG
+
+az webapp create `
+    --plan keyvault01-exercices-plan `
+    --resource-group prac11RG `
+    --name prac11bmvb2021
+
+
+az webapp config appsettings set `
+    --resource-group prac11RG `
+    --name prac11bmvb2021 `
+    --settings 'VaultName=akvbmvb2021prac11'
+
+az webapp identity assign `
+    --resource-group prac11RG `
+    --name prac11bmvb2021
+
+# Salida del comando anterior:
+# {
+#  "principalId": "a8d70fbf-8336-42c3-9d81-3dcc0011b998",
+#  "tenantId": "1b52546f-020f-4355-87bc-775039d62cbe",
+#  "type": "SystemAssigned",
+#  "userAssignedIdentities": null
+#}
+
+az keyvault set-policy `
+    --secret-permissions get list `
+    --name akvbmvb2021prac11 `
+    --object-id a8d70fbf-8336-42c3-9d81-3dcc0011b998
+
+
+az webapp deployment source config-zip `
+    --src site.zip `
+    --resource-group prac11RG `
+    --name prac11bmvb2021
+
+
+az keyvault  list --resource-group prac11RG --output table
+
+az group list --output table
+
+az group list --query "[? contains(name,'prac')][].{name:name}" -o tsv
+
+az group delete --name mslearn-autoscale --yes --no-wait
+
+for rgname in $(az group list --query "[? contains(name,'prac')][].{name:name}" -o tsv); 
+do
+    echo Deleting ${rgname}
+    az group delete -n ${rgname} --yes --no-wait
+done

@@ -1,0 +1,77 @@
+az group  create --name prac15RG --location=francecentral
+
+# Configurar en namespace event hub
+az configure --defaults group=prac15RG location=francecentral
+
+# Crear un namespace event hub
+az eventhubs namespace create --name evhubbmvb2021 --resource-group prac15RG --location francecentral --sku Standard
+
+# Recuperar la cadena de conexión
+az eventhubs namespace authorization-rule keys list --name RootManageSharedAccessKey --namespace-name evhubbmvb2021
+
+primaryConnectionString
+primaryKey
+
+{
+  "aliasPrimaryConnectionString": null,
+  "aliasSecondaryConnectionString": null,
+  "keyName": "RootManageSharedAccessKey",
+  "primaryConnectionString": "Endpoint=sb://evhubbmvb2021.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=zMFcSuCncNKFo+oqG4I07aXSdkG7rMYd1+q3lWtw8Lk=",
+  "primaryKey": "zMFcSuCncNKFo+oqG4I07aXSdkG7rMYd1+q3lWtw8Lk=",
+  "secondaryConnectionString": "Endpoint=sb://evhubbmvb2021.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=T15sUGPYPR3Ih3BqDwExdZrafIkNMNDy9hBL9ht57Qw=",        
+  "secondaryKey": "T15sUGPYPR3Ih3BqDwExdZrafIkNMNDy9hBL9ht57Qw="
+}
+
+# Creación de un Event Hub en el namespace anteriormente creado
+az eventhubs eventhub create --name evhub01bmvb --namespace-name evhubbmvb2021 --resource-group prac15RG
+
+# Añadimos una Blob Storage de una Azure Storage Account para vinculada a Event Hub
+
+az storage account create --name saprac15bmvb --sku Standard_RAGRS --encryption-service blob 
+
+# Recuperación de la az storage Account sus claves
+az storage account keys list --account-name saprac15bmvb
+
+[
+  {
+    "keyName": "key1",
+    "permissions": "FULL",
+    "value": "wj1+gOt4suIFTQS5jHoT5F+xp7Uks2SF8pIBSRb5d2rn/FPBFS5tLkpm+BUuLidN1wllpM7qnOfyzY3UAgV8eg=="
+  },
+  {
+    "keyName": "key2",
+    "permissions": "FULL",
+    "value": "RMlk514AOOmWsa0t2Cntd8MBzQ12xvPM+PaaSVCkjmDjUeeCGLxgdAWTOltj4jnLZQcdxTys+sojIpZYM3HvEw=="
+  }
+]
+
+# Recuperación de la az storage Account su connection string
+az storage account show-connection-string -n saprac15bmvb
+
+{
+  "connectionString": "DefaultEndpointsProtocol=https;EndpointSuffix=core.windows.net;AccountName=saprac15bmvb;AccountKey=wj1+gOt4suIFTQS5jHoT5F+xp7Uks2SF8pIBSRb5d2rn/FPBFS5tLkpm+BUuLidN1wllpM7qnOfyzY3UAgV8eg=="
+}
+
+az storage container create --name messages --connection-string "DefaultEndpointsProtocol=https;EndpointSuffix=core.windows.net;AccountName=saprac15bmvb;AccountKey=wj1+gOt4suIFTQS5jHoT5F+xp7Uks2SF8pIBSRb5d2rn/FPBFS5tLkpm+BUuLidN1wllpM7qnOfyzY3UAgV8eg=="
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

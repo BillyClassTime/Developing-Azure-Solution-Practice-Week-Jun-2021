@@ -1,0 +1,15 @@
+az group create --name prac10RG --location francecentral
+
+az storage account create `
+  --resource-group prac10RG `
+  --location francecentral `
+  --sku Standard_LRS `
+  --name prac10bmvb
+
+  az storage account show-connection-string `
+  --resource-group prac10RG `
+  --query connectionString `
+  --name prac10bmvb
+
+  az storage container list `
+--account-name prac10bmvb --output table

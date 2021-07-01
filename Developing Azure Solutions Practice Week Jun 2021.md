@@ -78,7 +78,7 @@ Manage Azure Function code
 
 
 
-## 6- Develop and configure an ASP.NET application that queries an Azure SQL database
+## 7- Develop and configure an ASP.NET application that queries an Azure SQL database
 
 [Develop and configure an ASP.NET application that queries an Azure SQL database - Learn | Microsoft Docs](https://docs.microsoft.com/en-us/learn/modules/develop-app-that-queries-azure-sql/)
 
@@ -92,7 +92,7 @@ Configure an ASP.NET application to query the database
 
 
 
-## 7- Build a .NET Core app for Azure Cosmos DB in Visual Studio Code
+## 8- Build a .NET Core app for Azure Cosmos DB in Visual Studio Code
 
 [Build a .NET Core app for Azure Cosmos DB in Visual Studio Code - Learn | Microsoft Docs](https://docs.microsoft.com/en-us/learn/modules/build-cosmos-db-app-with-vscode/)
 
@@ -110,7 +110,7 @@ In this module, you will:
 
   
 
-## 8- Choose a data storage approach in Azure
+## 9- Choose a data storage approach in Azure
 
 [Choose a data storage approach in Azure - Learn | Microsoft Docs](https://docs.microsoft.com/en-us/learn/modules/choose-storage-approach-in-azure/)
 
@@ -128,7 +128,7 @@ In this module, you will:
 
   
 
-## 9- Connect an app to Azure Storage
+## 10- Connect an app to Azure Storage
 
 [Connect an app to Azure Storage - Learn | Microsoft Docs](https://docs.microsoft.com/en-us/learn/modules/connect-an-app-to-azure-storage/)
 
@@ -144,7 +144,7 @@ In this module, you will:
 
 
 
-## 10- Store application data with Azure Blob storage
+## 11- Store application data with Azure Blob storage
 
 [Store application data with Azure Blob storage - Learn | Microsoft Docs](https://docs.microsoft.com/en-us/learn/modules/store-app-data-with-azure-blob-storage/)
 
@@ -160,13 +160,13 @@ In this module, you will:
 
 
 
-## 11- Manage secrets in your server apps with Azure Key Vault
+## 12- Manage secrets in your server apps with Azure Key Vault
 
 [Manage secrets in your server apps with Azure Key Vault - Learn | Microsoft Docs](https://docs.microsoft.com/en-us/learn/modules/manage-secrets-with-azure-key-vault/)
 
 Your application requires service passwords, connection strings, and other secret configuration values to do its job. Storing and handling secret values is risky, and every usage introduces the possibility of leakage. Azure Key Vault, in combination with managed identities for Azure resources, enables your Azure web app to access secret configuration values easily and securely without needing to store any secrets in your source control or configuration.
 
-## Learning objectives
+### Learning objectives
 
 In this module, you will:
 
@@ -177,7 +177,7 @@ In this module, you will:
 
 
 
-## 12- Build automated workflows to integrate data and apps with Azure Logic Apps
+## 13- Build automated workflows to integrate data and apps with Azure Logic Apps
 
 [Build automated workflows to integrate data and apps with Azure Logic Apps - Learn | Microsoft Docs](https://docs.microsoft.com/en-us/learn/paths/build-workflows-with-logic-apps/)
 
@@ -185,13 +185,13 @@ Azure Logic Apps is a cloud service that automates the execution of your busines
 
 
 
-## 13- Implement message-based communication workflows with Azure Service Bus
+## 14- Implement message-based communication workflows with Azure Service Bus
 
 [Implement message-based communication workflows with Azure Service Bus - Learn | Microsoft Docs](https://docs.microsoft.com/en-us/learn/modules/implement-message-workflows-with-service-bus/)
 
 Write C# code in a custom application that sends and receives messages using Azure Service Bus topics and queues.
 
-## Learning objectives
+### Learning objectives
 
 In this module, you will:
 
@@ -202,13 +202,13 @@ In this module, you will:
 
 
 
-## 14- Communicate between applications with Azure Queue storage
+## 15- Communicate between applications with Azure Queue storage
 
 [Communicate between applications with Azure Queue storage - Learn | Microsoft Docs](https://docs.microsoft.com/en-us/learn/modules/communicate-between-apps-with-azure-queue-storage/)
 
 Implement the publish-subscribe pattern in the cloud using Azure Queue storage.
 
-## Learning objectives
+### Learning objectives
 
 In this module, you will:
 
@@ -218,13 +218,13 @@ In this module, you will:
 
 
 
-## 15- Enable reliable messaging for Big Data applications using Azure Event Hubs
+## 16- Enable reliable messaging for Big Data applications using Azure Event Hubs
 
 [Enable reliable messaging for Big Data applications using Azure Event Hubs - Learn | Microsoft Docs](https://docs.microsoft.com/en-us/learn/modules/enable-reliable-messaging-for-big-data-apps-using-event-hubs/)
 
 Connect sending and receiving applications with Event Hubs so you can handle extremely high loads without losing data.
 
-## Learning objectives
+### Learning objectives
 
 In this module, you will:
 
@@ -236,7 +236,23 @@ In this module, you will:
 
   
 
-## 16- Build serverless, full stack applications in Azure
+## 17-Build a Web app with Blazor
+
+[Build a web app with Blazor - Learn | Microsoft Docs](https://docs.microsoft.com/en-us/learn/modules/build-blazor-webassembly-visual-studio-code/?ocid=aid3021690)
+
+Learn how to set up your development environment and build your first web app with Blazor, Visual Studio Code, and C#.
+
+### Learning objectives
+
+In this module, you will:
+
+- Configure your local environment for Blazor development with Visual Studio Code
+- Create a new Blazor project
+- Add client-side logic to a Blazor web app
+
+
+
+## 18- Build serverless, full stack applications in Azure
 
 [Build serverless, full stack applications in Azure - Learn | Microsoft Docs](https://docs.microsoft.com/en-us/learn/paths/build-serverless-full-stack-apps-azure/)
 
