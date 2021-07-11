@@ -1,8 +1,9 @@
-az group  create --name prac15RG --location=francecentral
+#az extension list-available --output table
+#https://docs.microsoft.com/en-us/cli/azure/azure-cli-extensions-overview
 
+az group  create --name prac15RG --location=westeurope
 # Configurar en namespace event hub
-az configure --defaults group=prac15RG location=francecentral
-
+az configure --defaults group=prac15RG location=westeurope
 # Crear un namespace event hub
 az eventhubs namespace create --name evhubbmvb2021 --resource-group prac15RG --location francecentral --sku Standard
 
